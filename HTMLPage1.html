@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name=”viewport” content=”width=device-width, initial-scale=1” >
+    <title>うめ吉とズガイの秘密基地</title>
+</head>
+<body>
+    <h1>うめ吉とズガイの秘密基地</h1>
+    <form action="#" method="post">
+	<p>あいことばを教えてね：<br>
+    <p></p>
+	<label>あいことば:<input type="text" id="nameText"></label>
+    
+	<p><input type="button" value="決定" id="checkButton"></p>
+
+    <p id="msg"></p>
+    <p></p>
+    <p></p>
+
+    <script>
+    let age = 14;
+      let nameText = document.getElementById('nameText');
+
+  function butotnClick()
+  {
+  let word = nameText.value;
+  if(word == "gift"){ 
+  msg.innerText = 'あいことばは「' + nameText.value + '」ですね？';
+  Correct();}
+  else{ msg.innerText = 'あいことばは「' + nameText.value + '」ですね？';testFunc();}
+  }
+
+
+nameText.value = 'あいことば';
+let msg = document.getElementById('msg');
+
+let checkButton = document.getElementById('checkButton');
+checkButton.addEventListener('click', butotnClick);
+
+</script>
+<br>
+<br>
+    <p></p>
+    <p></p>
+ <p id="msg2"></p>
+ <p id="msg3"></p>
+ <p id="img"></p>
+ <p id="button2"></p>
+<div id="test">
+<input hidden type="button" value="受け取る" id="button2">
+<img hidden src="ticket.png" id="ticketIMG"  align="left"></div>
+ 
+
+     <script>
+     function testFunc()
+     {
+        msg2.innerText = "ズガイ「あいことばが違うよ！帰れ！」";
+        msg3.innerText = "うめ吉「また遊ぼうね～」";
+
+     }
+     const button2 = document.getElementById('button2');
+     const test = document.getElementById('ticketIMG');
+
+     const hiddenFlag = button2.hidden;
+     const hiddenFlag2 = test.hidden;
+
+     function Correct()
+     {
+        msg2.innerText = "うめ吉「あいことばが合っているよ！！　秘密基地へようこそ！」";
+        msg3.innerText = "ズガイ「僕たちからのプレゼントを受け取ってくれズガイ」";
+        test.hidden = false;
+        //test.classList.remove("hidden");
+        //document.getElementById('button2').write('<input type="button" value="受け取る" id="button2">');
+        
+        //checkButton.disabled;
+        //button2.disabled = false;
+       // document.write('<img src="ticket.png" id="ticketIMG"  align="left">');
+	 }
+
+     </script>
+
+      
+      
+      <script>
+    //const button2 = document.getElementById('button2');
+    const checkButton = document.getElementById('checkButton');
+            const test = document.getElementById('button2');
+    }
+</script>
+
+</body>
+</html>
